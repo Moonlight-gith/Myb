@@ -1,47 +1,35 @@
-# index.html
-!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dexterity | Brand Design & Fashion</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <h1>Dexterity</h1>
-      <p>Where Design Meets Bold Identity</p>
-      <a href="#services" class="btn">Explore Our Work</a>
-    </div>
-  </header>
+# Efficiency Platform Starter
 
-  <section id="services" class="services">
-    <div class="container">
-      <h2>What We Do</h2>
-      <div class="service-boxes">
-        <div class="box">
-          <h3>Brand Identity</h3>
-          <p>Logos, color palettes, and visual systems that speak your style.</p>
-        </div>
-        <div class="box">
-          <h3>Fashion Design</h3>
-          <p>Cutting-edge trends turned into timeless pieces with purpose.</p>
-        </div>
-        <div class="box">
-          <h3>Creative Direction</h3>
-          <p>Artistic guidance to bring your brand’s vision to life.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+A ready-to-run full-stack starter you can extend into a platform that boosts other software’s efficiency across finance, industrial, conglomerate, and general company contexts.
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Dexterity. Designed with flair.</p>
-      <p>Email: hello@dexterity.com</p>
-    </div>
-  </footer>
-</body>
-</html>
+## What you get
+
+- Backend: FastAPI (Python) with endpoints for metric ingestion, summaries, anomaly detection, and optimization suggestions (sector-aware).
+- Frontend: React (CDN) + Tailwind + Chart.js single-file dashboard for posting metrics, viewing trends, and getting suggestions.
+
+## Run locally
+
+### 1) Backend
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+```
+
+This will create a local SQLite database `metrics.db` in `backend/`.
+
+### 2) Frontend
+
+Open `frontend/index.html` in your browser (double-click). If your API runs elsewhere, edit `API Base URL` at the top of the page or change the `api_base` in localStorage.
+
+## API
+
+- POST `/api/v1/ingest` — send a data point `{ sector, metric_name, value }`
+- GET `/api/v1/metrics` — fetch time series per sector/metric
+- GET `/api/v1/summary` — min/max/avg + simple moving average trend
+- GET `/api/v1/anomalies` — z-score anomaly detection
+- POST `/api/v1/optimize` — heuristic, sector-aware recommendations
+
+CORS is enabled for development. Modify as needed for production.
 
