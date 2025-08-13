@@ -1,0 +1,17 @@
+INFO:     Will watch for changes in these directories: ['/workspace/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [3292] using WatchFiles
+INFO:     Started server process [3294]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:51946 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48480 - "POST /api/v1/ingest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48496 - "POST /api/v1/ingest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48498 - "POST /api/v1/ingest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48512 - "POST /api/v1/ingest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48516 - "POST /api/v1/ingest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48524 - "GET /api/v1/metrics?sector=finance&metric_name=latency_ms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58096 - "GET /api/v1/metrics?sector=finance&metric_name=latency_ms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58108 - "GET /api/v1/summary?sector=finance&metric_name=latency_ms&window=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58114 - "GET /api/v1/anomalies?sector=finance&metric_name=latency_ms&threshold_z=1.5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39930 - "POST /api/v1/optimize HTTP/1.1" 200 OK
